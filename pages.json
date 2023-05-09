@@ -1,0 +1,151 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// {
+		// 	"path": "pages/identity/identity",
+		// 	"style": {
+		// 		"navigationBarTitleText": "身份认证",
+		// 		"enablePullDownRefresh": false
+		// 	}
+		// },
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "主页",
+				"navigationStyle": "custom"
+			}
+		}
+        ,{
+            "path" : "pages/Service/home",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "服务商",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/Service/record",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "核销记录",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/Service/Money",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的钱包",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/Service/authentication",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/user",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "个人身份认证",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"subPackages": [{
+		"root": "pages/Promoter",
+		"pages": [
+			{
+			    "path" : "addBank",
+			    "style" :                                                                                    
+			    {
+			        "navigationBarTitleText": "添加银行卡",
+			        "enablePullDownRefresh": false
+			    }
+			    
+			},
+			{
+			    "path" : "address",
+			    "style" :                                                                                    
+			    {
+			        "navigationBarTitleText": "收货地址",
+			        "enablePullDownRefresh": false
+			    }
+			    
+			},
+			{
+			    "path" : "home",
+			    "style" :                                                                                    
+			    {
+			        "navigationBarTitleText": "推广商",
+			        "enablePullDownRefresh": false
+			    }
+			    
+			},
+			{
+			    "path" : "Information",
+			    "style" :                                                                                    
+			    {
+			        "navigationBarTitleText": "个人信息",
+			        "enablePullDownRefresh": false
+			    }
+			    
+			},
+			{
+			    "path" : "Money",
+			    "style" :                                                                                    
+			    {
+			        "navigationBarTitleText": "我的钱包",
+			        "enablePullDownRefresh": false
+			    }
+			    
+			},
+			{
+			    "path" : "myMoney",
+			    "style" :                                                                                    
+			    {
+			        "navigationBarTitleText": "我的钱包",
+			        "enablePullDownRefresh": false
+			    }
+			    
+			},
+			{
+			    "path" : "promotion",
+			    "style" :                                                                                    
+			    {
+			        "navigationBarTitleText": "我的推广",
+			        "enablePullDownRefresh": false
+			    }
+			    
+			},
+			{
+			    "path" : "take",
+			    "style" :                                                                                    
+			    {
+			        "navigationBarTitleText": "推广记录",
+			        "enablePullDownRefresh": false
+			    }
+			    
+			}
+		]
+	}],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"uniIdRouter": {}
+}

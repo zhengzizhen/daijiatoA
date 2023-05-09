@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "个人身份认证",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "card": "/components/bottom"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/Service/home",
+    "pages/Service/record",
+    "pages/Service/Money",
+    "pages/Service/authentication",
+    "pages/user/user"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/Promoter",
+      "pages": [
+        "addBank",
+        "address",
+        "home",
+        "Information",
+        "Money",
+        "myMoney",
+        "promotion",
+        "take"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#FFFFFF"
+  },
+  "usingComponents": {}
+}
