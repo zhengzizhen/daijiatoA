@@ -5,9 +5,9 @@
 			<image src="@/static/image/Promoter/background.jpg" mode=""></image>
 			
 			<view class="posia ioss">
-				<view class="ct_nav posir" @click="toDream">
+				<view class="ct_nav posir">
 					<text>我的账户余额(元)</text>
-					<p>￥{{money.toFixed(2)}}</p>
+					<p>￥{{userinfo.commission}}</p>
 					<view @click.stop="toMoney" class="cashout posia">
 						<p>去提现</p>
 					</view>
@@ -23,16 +23,11 @@
 				</p>
 			</view>
 		</view>
-		<Card />
 	</view>
 </template>
 
 <script>
-	import Card from '@/components/bottom.vue'
 	export default {
-		components: {
-			Card
-		},
 		data() {
 			return {
 				money: 200,
@@ -44,10 +39,17 @@
 						name: '我的信息',
 						image: '../../static/image/Promoter/user.png'
 					},
-				]
+				],
+				userinfo:{}
 			}
 		},
+		onLoad() {
+			this.getlist()
+		},
 		methods: {
+			getlist(){
+				this.userinfo = uni.getStorageSync('userinfo')
+			},
 			toMoney() {
 				this.$jump('/pages/Promoter/Money')
 			},
@@ -60,7 +62,7 @@
 						this.$jump('./record')
 						break;
 					case 1:
-						this.$jump('./authentication?tit=','params','服务商身份认证')
+						this.$jump('/pages/Promoter/Information')
 						break;
 				}
 			}

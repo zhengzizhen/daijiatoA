@@ -8,14 +8,10 @@
 			<view class="posia ioss">
 				<view class="ct_nav posir" @click="toDream">
 					<text>我的账户余额(元)</text>
-					<p>￥{{money.toFixed(2)}}</p>
+					<p>￥{{userinfo.commission}}</p>
 				</view>
 			</view>
 		</view>
-		<!-- <view class="ct_nav">
-			<text>我的账户余额(元)</text>
-			<p>￥{{money.toFixed(2)}}</p>
-		</view> -->
 		<view class="dis_f jscb ct_header">
 			<p>提现金额</p>
 			<p class="red" @click='all'>全部提现</p>
@@ -46,70 +42,60 @@
 			<view class="ct_pop dis_f flex_c">
 				<image @click="close()" class="close" src="@/static/image/Promoter/close.png" mode=""></image>
 				<image class="success" src="@/static/image/Promoter/success.jpg" mode=""></image>
-				<text>提现成功！</text>
+				<text>申请成功！</text>
 			</view>
 		</u-popup>
 		
-		
-		<u-popup :round="10" :show="isShow1" mode="bottom" @close="close1" @open="open1">
-			<view class="bank pd30">
-				<p class="banktit">选择到账银行卡</p>
-				
-				<p class="bankcontent dis_f alitmc">
-					<image src="@/static/image/Promoter/success.jpg" mode=""></image>
-					<text @click="tobindUser">工商银行  储蓄卡  （2342）</text>
-				</p>
-				
-				<p class="bankcontent dis_f alitmc" >
-					<image  mode=""></image>
-					<text @click='toBank'>使用新卡提现</text>
-				</p>
-			</view>
-		</u-popup>
-		<Card />
 	</view>
 </template>
 
 <script>
-	import Card from '@/components/bottom.vue'
 	export default {
-		components:{
-			Card
-		},
 		data() {
 			return {
-				money: 200,
 				tmoney: '',
 				isShow:false,
-				isShow1:false,
 				items: [
 					{
 						value: 'Bank',
-						name: '选择银行卡',
+						name: '微信提现',
 						image: '../../static/image/Promoter/yhk.jpg'
 					},
 				],
-				current: 0
+				current: 0,
+				userinfo:{}
 			};
+		},
+		onLoad() {
+			this.userinfo = uni.getStorageSync('userinfo')
 		},
 		methods: {
 			all() {
-				this.tmoney = this.money
+				this.tmoney = this.userinfo.commission
 			},
 			radioChange: function(evt) {
-				// for (let i = 0; i < this.items.length; i++) {
-				// 	if (this.items[i].value === evt.detail.value) {
-				// 		this.current = i;
-				// 		break;
-				// 	}
-				// }
-				// if(evt.detail.value == 'Bank'){
-				// 	this.isShow1 = true
-				// }
 				
 			},
-			cashout() {
-				this.isShow1 = !this.isShow1
+			async cashout() {
+				if(this.tmoney == ''){
+					uni.$u.toast('提现金额不能为空')
+					return false
+				}
+				
+				const res = await this.$http('promoter/withdraw',{
+					money:this.tmoney
+				})
+				this.getlist()
+				this.isShow = !this.isShow
+			},
+			async getlist(){
+				const res = await this.$http('promoter/detail')
+				uni.setStorageSync('userinfo',res.data)
+				setTimeout(()=>{
+					uni.redirectTo({
+						url:'/pages/Promoter/myMoney'
+					})
+				},1000)
 			},
 			open(){
 				
@@ -117,16 +103,10 @@
 			close() {
 				this.isShow = !this.isShow
 			},
-			open1(){
-				
-			},
-			close1() {
-				this.isShow1 = !this.isShow1
-			},
-			toBank(){
-				this.isShow1 = !this.isShow1
-				this.$jump('./addBank')
-			},
+			// toBank(){
+			// 	this.isShow1 = !this.isShow1
+			// 	this.$jump('./addBank')
+			// },
 			tobindUser(){
 				
 			}
@@ -222,7 +202,7 @@
 	}
 
 	.btn {
-		margin-top: 708rpx;
+		margin-top: 608rpx;
 	}
 	.ct_pop{
 		box-sizing: border-box;

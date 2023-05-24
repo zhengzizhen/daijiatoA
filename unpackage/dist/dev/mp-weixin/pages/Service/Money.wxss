@@ -30,7 +30,6 @@
   margin-top: 20rpx;
   padding: 60rpx 40rpx;
   height: 286rpx;
-  background: url(/static/image/Promoter/background.jpg) no-repeat 0 0;
   background-size: 100%;
   box-shadow: 0rpx 10rpx 7rpx 0rpx rgba(73, 202, 164, 0.08);
   border-radius: 20rpx;
@@ -109,5 +108,18 @@
 }
 .content .right .rigs.data-v-b691ac06 {
   color: #000000;
+}
+.ios.data-v-b691ac06 {
+  width: 694rpx;
+  height: 300rpx;
+}
+.ios image.data-v-b691ac06 {
+  width: 694rpx;
+  height: 300rpx;
+}
+.ios .ioss.data-v-b691ac06 {
+  width: 694rpx;
+  top: 0;
+  left: 0;
 }
 

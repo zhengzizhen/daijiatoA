@@ -12,8 +12,13 @@
 
 			<view class="content dis_f jscb">
 				<label>送货上门</label>
-				<view @click="toaddress" class="ipt dis_f alitmc">
+				<view @click="toaddress" class="ipt dis_f alitmc" v-if="address.length == 0">
 					<span>立即填写</span>
+					<image src="@/static/image/Promoter/right.jpg" mode=""></image>
+				</view>
+				
+				<view @click="toaddressplus" class="ipt dis_f alitmc" v-else>
+					<span>{{address.site_district}}</span>
 					<image src="@/static/image/Promoter/right.jpg" mode=""></image>
 				</view>
 			</view>
@@ -21,14 +26,14 @@
 			<view class="content dis_f jscb ">
 				<label>电话</label>
 				<view class="ipt dis_f alitmc">
-					<label>17272727272</label>
+					<label>{{userinfo.phone}}</label>
 					<image src="@/static/image/Promoter/right.jpg" mode=""></image>
 				</view>
 			</view>
 		</view>
 
 		<view class="fixed dis_f jscc">
-			<view class="btn">
+			<view class="btn" @click="submit">
 				提交申请
 			</view>
 		</view>
@@ -40,6 +45,8 @@
 		data() {
 			return {
 				num: 1,
+				userinfo: {},
+				address:{}
 			}
 		},
 		// 自定义此页面的转发给好友(已经有全局的分享方法，此处会覆盖全局)
@@ -55,10 +62,17 @@
 			return {
 				title: '页面分享的标题',
 				path: '/pages/Promoter/promotion',
-				// imageUrl: '/static/imgs/mylogo.png'
 			}
 		},
+		onLoad() {
+			this.userinfo = uni.getStorageSync('userinfo')
+			this.getaddress()
+		},
 		methods: {
+			async getaddress(){
+				const res = await this.$http('promoter/address')
+				this.address = res.data
+			},
 			reduce() {
 				if (this.num == 1) {
 					return false
@@ -70,6 +84,20 @@
 			},
 			toaddress() {
 				this.$jump('./address')
+			},
+			toaddressplus(){
+				this.$jump('./address?obj=','params', JSON.stringify(this.address))
+			},
+			async submit() {
+				const res = await this.$http('promoter/qrcode/apply', {
+					number: this.num
+				})
+				uni.$u.toast('申请成功')
+				setTimeout(() => {
+					uni.redirectTo({
+						url: '/pages/Promoter/home'
+					})
+				}, 1000)
 			}
 		}
 	}

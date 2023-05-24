@@ -2,7 +2,6 @@
   "navigationBarTitleText": "核销记录",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "u-picker": "/node-modules/uview-ui/components/u-picker/u-picker",
-    "card": "/components/bottom"
+    "u-picker": "/node-modules/uview-ui/components/u-picker/u-picker"
   }
 }

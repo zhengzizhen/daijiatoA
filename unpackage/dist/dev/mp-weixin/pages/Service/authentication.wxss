@@ -45,6 +45,10 @@
   border-radius: 20rpx;
   text-align: center;
 }
+.cont .ref.data-v-3deccfeb {
+  width: 690rpx;
+  height: 300rpx;
+}
 .cont .img.data-v-3deccfeb {
   width: 88rpx;
   height: 88rpx;

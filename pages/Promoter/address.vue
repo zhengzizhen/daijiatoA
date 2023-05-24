@@ -3,22 +3,22 @@
 		<view class="card bor_r">
 			<view class="content dis_f">
 				<label>姓名</label>
-				<input type="text" v-model="user.name" placeholder="请填写真实姓名">
+				<input type="text" v-model="user.site_username" placeholder="请填写真实姓名">
 			</view>
 			
 			<view class="content dis_f">
 				<label>手机号</label>
-				<input type="number" maxlength="11" v-model="user.phone" placeholder="请填写手机号">
+				<input type="number" maxlength="11" v-model="user.site_phone" placeholder="请填写手机号">
 			</view>
 			
 			<view class="content dis_f">
 				<label>省市区</label>
-				<input type="text" v-model="user.address" placeholder="请输入省市区">
+				<input type="text" v-model="user.site_district" placeholder="请输入省市区">
 			</view>
 			
 			<view class="content dis_f">
 				<label>详细地址</label>
-				<input type="text" v-model="user.none" placeholder="请输入详细地址">
+				<input type="text" v-model="user.site_address" placeholder="请输入详细地址">
 			</view>
 		</view>
 		
@@ -33,15 +33,20 @@
 		data() {
 			return {
 				user:{
-					name:'',
-					phone:'',
-					address:'',
-					none:''
+					site_username:'',
+					site_phone:'',
+					site_district:'',
+					site_address:''
 				}
 			}
 		},
+		onLoad(option) {
+			if(option.obj){
+				this.user = JSON.parse(option.obj)
+			}
+		},
 		methods: {
-			toPro(){
+			async toPro(){
 				let reg = /^1((34[0-8])|(8\d{2})|(([35][0-35-9]|4[579]|66|7[35678]|9[1389])\d{1}))\d{7}$/
 				if(this.user.name == ''){
 					uni.$u.toast('姓名不能为空')
@@ -59,6 +64,13 @@
 					uni.$u.toast('请输入正确的手机号码')
 					return false
 				}
+				uni.showLoading()
+				const res = this.$http('promoter/address/set',this.user)
+				uni.hideLoading()
+				uni.$u.toast('保存成功')
+				setTimeout(()=>{
+					this.$jump('/pages/Promoter/promotion','redirect')
+				},500)
 			}
 		}
 	}

@@ -1556,7 +1556,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"推广端","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"推广端","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8913,7 +8913,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"推广端","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"推广端","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8934,14 +8934,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"推广端","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"推广端","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"推广端","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"推广端","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9037,7 +9037,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"推广端","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"推广端","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9455,9 +9455,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 26 */
-/*!*****************************************!*\
-  !*** C:/Users/z/Desktop/推广端/pages.json ***!
-  \*****************************************/
+/*!*************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/pages.json ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9601,9 +9601,9 @@ function normalizeComponent (
 
 /***/ }),
 /* 33 */
-/*!*************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/index.js ***!
-  \*************************************************************/
+/*!*********************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/index.js ***!
+  \*********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9690,9 +9690,9 @@ exports.default = _default;
 
 /***/ }),
 /* 34 */
-/*!************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/mixin/mixin.js ***!
-  \************************************************************************/
+/*!********************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/mixin/mixin.js ***!
+  \********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9858,9 +9858,9 @@ exports.default = _default;
 
 /***/ }),
 /* 35 */
-/*!**************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/mixin/mpMixin.js ***!
-  \**************************************************************************/
+/*!**********************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/mixin/mpMixin.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9881,9 +9881,9 @@ exports.default = _default;
 
 /***/ }),
 /* 36 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/index.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/index.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9901,9 +9901,9 @@ exports.default = _default;
 
 /***/ }),
 /* 37 */
-/*!**************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/core/Request.js ***!
-  \**************************************************************************************/
+/*!**********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/core/Request.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10107,9 +10107,9 @@ exports.default = Request;
 
 /***/ }),
 /* 38 */
-/*!**********************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
-  \**********************************************************************************************/
+/*!******************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
+  \******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10129,9 +10129,9 @@ exports.default = _default;
 
 /***/ }),
 /* 39 */
-/*!****************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/adapters/index.js ***!
-  \****************************************************************************************/
+/*!************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/adapters/index.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10210,9 +10210,9 @@ exports.default = _default;
 
 /***/ }),
 /* 40 */
-/*!******************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
-  \******************************************************************************************/
+/*!**************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10280,9 +10280,9 @@ function buildURL(url, params) {
 
 /***/ }),
 /* 41 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/utils.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/utils.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10433,9 +10433,9 @@ function isUndefined(val) {
 
 /***/ }),
 /* 42 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
-  \********************************************************************************************/
+/*!****************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10467,9 +10467,9 @@ function buildFullPath(baseURL, requestedURL) {
 
 /***/ }),
 /* 43 */
-/*!***********************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
-  \***********************************************************************************************/
+/*!*******************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
+  \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10495,9 +10495,9 @@ function isAbsoluteURL(url) {
 
 /***/ }),
 /* 44 */
-/*!*********************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
-  \*********************************************************************************************/
+/*!*****************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10521,9 +10521,9 @@ function combineURLs(baseURL, relativeURL) {
 
 /***/ }),
 /* 45 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/core/settle.js ***!
-  \*************************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/core/settle.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10553,9 +10553,9 @@ function settle(resolve, reject, response) {
 
 /***/ }),
 /* 46 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
-  \*************************************************************************************************/
+/*!*********************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10617,9 +10617,9 @@ exports.default = _default;
 
 /***/ }),
 /* 47 */
-/*!******************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
-  \******************************************************************************************/
+/*!**************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10693,9 +10693,9 @@ exports.default = _default;
 
 /***/ }),
 /* 48 */
-/*!***************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/core/defaults.js ***!
-  \***************************************************************************************/
+/*!***********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/core/defaults.js ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10725,9 +10725,9 @@ exports.default = _default;
 
 /***/ }),
 /* 49 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/luch-request/utils/clone.js ***!
-  \*************************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/luch-request/utils/clone.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10973,7 +10973,7 @@ var clone = function () {
 }();
 var _default = clone;
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/buffer/index.js */ 50).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../华为云盘/HBuilderX.3.7.9.20230324/HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 50).Buffer))
 
 /***/ }),
 /* 50 */
@@ -13049,9 +13049,9 @@ module.exports = Array.isArray || function (arr) {
 
 /***/ }),
 /* 54 */
-/*!***********************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/util/route.js ***!
-  \***********************************************************************/
+/*!*******************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/util/route.js ***!
+  \*******************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13611,9 +13611,9 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 
 /***/ }),
 /* 58 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/function/colorGradient.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/function/colorGradient.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13766,9 +13766,9 @@ exports.default = _default;
 
 /***/ }),
 /* 59 */
-/*!**************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/function/test.js ***!
-  \**************************************************************************/
+/*!**********************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/function/test.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14071,9 +14071,9 @@ exports.default = _default;
 
 /***/ }),
 /* 60 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/function/debounce.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/function/debounce.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14118,9 +14118,9 @@ exports.default = _default;
 
 /***/ }),
 /* 61 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/function/throttle.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/function/throttle.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14167,9 +14167,9 @@ exports.default = _default;
 
 /***/ }),
 /* 62 */
-/*!***************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/function/index.js ***!
-  \***************************************************************************/
+/*!***********************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/function/index.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14924,9 +14924,9 @@ exports.default = _default;
 
 /***/ }),
 /* 63 */
-/*!***************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/function/digit.js ***!
-  \***************************************************************************/
+/*!***********************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/function/digit.js ***!
+  \***********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15143,9 +15143,9 @@ module.exports = _toArray, module.exports.__esModule = true, module.exports["def
 
 /***/ }),
 /* 65 */
-/*!**************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/config.js ***!
-  \**************************************************************************/
+/*!**********************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/config.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15187,9 +15187,9 @@ exports.default = _default;
 
 /***/ }),
 /* 66 */
-/*!*************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props.js ***!
-  \*************************************************************************/
+/*!*********************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props.js ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15299,9 +15299,9 @@ exports.default = _default;
 
 /***/ }),
 /* 67 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/actionSheet.js ***!
-  \*************************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/actionSheet.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15343,9 +15343,9 @@ exports.default = _default;
 
 /***/ }),
 /* 68 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/album.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/album.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15387,9 +15387,9 @@ exports.default = _default;
 
 /***/ }),
 /* 69 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/alert.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/alert.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15426,9 +15426,9 @@ exports.default = _default;
 
 /***/ }),
 /* 70 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/avatar.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/avatar.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15471,9 +15471,9 @@ exports.default = _default;
 
 /***/ }),
 /* 71 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/avatarGroup.js ***!
-  \*************************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/avatarGroup.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15513,9 +15513,9 @@ exports.default = _default;
 
 /***/ }),
 /* 72 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/backtop.js ***!
-  \*********************************************************************************/
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/backtop.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15559,9 +15559,9 @@ exports.default = _default;
 
 /***/ }),
 /* 73 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/badge.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/badge.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15605,9 +15605,9 @@ exports.default = _default;
 
 /***/ }),
 /* 74 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/button.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/button.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15664,9 +15664,9 @@ exports.default = _default;
 
 /***/ }),
 /* 75 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/calendar.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/calendar.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15727,9 +15727,9 @@ exports.default = _default;
 
 /***/ }),
 /* 76 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/carKeyboard.js ***!
-  \*************************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/carKeyboard.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15759,9 +15759,9 @@ exports.default = _default;
 
 /***/ }),
 /* 77 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/cell.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/cell.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15811,9 +15811,9 @@ exports.default = _default;
 
 /***/ }),
 /* 78 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/cellGroup.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/cellGroup.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15845,9 +15845,9 @@ exports.default = _default;
 
 /***/ }),
 /* 79 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/checkbox.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/checkbox.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15889,9 +15889,9 @@ exports.default = _default;
 
 /***/ }),
 /* 80 */
-/*!***************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
-  \***************************************************************************************/
+/*!***********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15937,9 +15937,9 @@ exports.default = _default;
 
 /***/ }),
 /* 81 */
-/*!****************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/circleProgress.js ***!
-  \****************************************************************************************/
+/*!************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/circleProgress.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15969,9 +15969,9 @@ exports.default = _default;
 
 /***/ }),
 /* 82 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/code.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/code.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16006,9 +16006,9 @@ exports.default = _default;
 
 /***/ }),
 /* 83 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/codeInput.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/codeInput.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16051,9 +16051,9 @@ exports.default = _default;
 
 /***/ }),
 /* 84 */
-/*!*****************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/col.js ***!
-  \*****************************************************************************/
+/*!*************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/col.js ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16087,9 +16087,9 @@ exports.default = _default;
 
 /***/ }),
 /* 85 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/collapse.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/collapse.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16121,9 +16121,9 @@ exports.default = _default;
 
 /***/ }),
 /* 86 */
-/*!**************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/collapseItem.js ***!
-  \**************************************************************************************/
+/*!**********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/collapseItem.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16163,9 +16163,9 @@ exports.default = _default;
 
 /***/ }),
 /* 87 */
-/*!**************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/columnNotice.js ***!
-  \**************************************************************************************/
+/*!**********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/columnNotice.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16204,9 +16204,9 @@ exports.default = _default;
 
 /***/ }),
 /* 88 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/countDown.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/countDown.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16239,9 +16239,9 @@ exports.default = _default;
 
 /***/ }),
 /* 89 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/countTo.js ***!
-  \*********************************************************************************/
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/countTo.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16281,9 +16281,9 @@ exports.default = _default;
 
 /***/ }),
 /* 90 */
-/*!****************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/datetimePicker.js ***!
-  \****************************************************************************************/
+/*!************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/datetimePicker.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16336,9 +16336,9 @@ exports.default = _default;
 
 /***/ }),
 /* 91 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/divider.js ***!
-  \*********************************************************************************/
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/divider.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16375,9 +16375,9 @@ exports.default = _default;
 
 /***/ }),
 /* 92 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/empty.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/empty.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16417,9 +16417,9 @@ exports.default = _default;
 
 /***/ }),
 /* 93 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/form.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/form.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16462,9 +16462,9 @@ exports.default = _default;
 
 /***/ }),
 /* 94 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/formItem.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/formItem.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16501,9 +16501,9 @@ exports.default = _default;
 
 /***/ }),
 /* 95 */
-/*!*****************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/gap.js ***!
-  \*****************************************************************************/
+/*!*************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/gap.js ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16537,9 +16537,9 @@ exports.default = _default;
 
 /***/ }),
 /* 96 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/grid.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/grid.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16571,9 +16571,9 @@ exports.default = _default;
 
 /***/ }),
 /* 97 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/gridItem.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/gridItem.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16604,9 +16604,9 @@ exports.default = _default;
 
 /***/ }),
 /* 98 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/icon.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/icon.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16656,9 +16656,9 @@ exports.default = _default;
 
 /***/ }),
 /* 99 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/image.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/image.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16703,9 +16703,9 @@ exports.default = _default;
 
 /***/ }),
 /* 100 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/indexAnchor.js ***!
-  \*************************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/indexAnchor.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16739,9 +16739,9 @@ exports.default = _default;
 
 /***/ }),
 /* 101 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/indexList.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/indexList.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16777,9 +16777,9 @@ exports.default = _default;
 
 /***/ }),
 /* 102 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/input.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/input.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16842,9 +16842,9 @@ exports.default = _default;
 
 /***/ }),
 /* 103 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/keyboard.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/keyboard.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16889,9 +16889,9 @@ exports.default = _default;
 
 /***/ }),
 /* 104 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/line.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/line.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16926,9 +16926,9 @@ exports.default = _default;
 
 /***/ }),
 /* 105 */
-/*!**************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/lineProgress.js ***!
-  \**************************************************************************************/
+/*!**********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/lineProgress.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16962,9 +16962,9 @@ exports.default = _default;
 
 /***/ }),
 /* 106 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/link.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/link.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17004,9 +17004,9 @@ exports.default = _default;
 
 /***/ }),
 /* 107 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/list.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/list.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17049,9 +17049,9 @@ exports.default = _default;
 
 /***/ }),
 /* 108 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/listItem.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/listItem.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17081,9 +17081,9 @@ exports.default = _default;
 
 /***/ }),
 /* 109 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/loadingIcon.js ***!
-  \*************************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/loadingIcon.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17127,9 +17127,9 @@ exports.default = _default;
 
 /***/ }),
 /* 110 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/loadingPage.js ***!
-  \*************************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/loadingPage.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17166,9 +17166,9 @@ exports.default = _default;
 
 /***/ }),
 /* 111 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/loadmore.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/loadmore.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17212,9 +17212,9 @@ exports.default = _default;
 
 /***/ }),
 /* 112 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/modal.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/modal.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17259,9 +17259,9 @@ exports.default = _default;
 
 /***/ }),
 /* 113 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/navbar.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/navbar.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17308,9 +17308,9 @@ exports.default = _default;
 
 /***/ }),
 /* 114 */
-/*!*************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/color.js ***!
-  \*************************************************************************/
+/*!*********************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/color.js ***!
+  \*********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17341,9 +17341,9 @@ exports.default = _default;
 
 /***/ }),
 /* 115 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/noNetwork.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/noNetwork.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17375,9 +17375,9 @@ exports.default = _default;
 
 /***/ }),
 /* 116 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/noticeBar.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/noticeBar.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17421,9 +17421,9 @@ exports.default = _default;
 
 /***/ }),
 /* 117 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/notify.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/notify.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17460,9 +17460,9 @@ exports.default = _default;
 
 /***/ }),
 /* 118 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/numberBox.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/numberBox.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17512,9 +17512,9 @@ exports.default = _default;
 
 /***/ }),
 /* 119 */
-/*!****************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
-  \****************************************************************************************/
+/*!************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
+  \************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17546,9 +17546,9 @@ exports.default = _default;
 
 /***/ }),
 /* 120 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/overlay.js ***!
-  \*********************************************************************************/
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/overlay.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17581,9 +17581,9 @@ exports.default = _default;
 
 /***/ }),
 /* 121 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/parse.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/parse.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17620,9 +17620,9 @@ exports.default = _default;
 
 /***/ }),
 /* 122 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/picker.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/picker.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17671,9 +17671,9 @@ exports.default = _default;
 
 /***/ }),
 /* 123 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/popup.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/popup.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17717,9 +17717,9 @@ exports.default = _default;
 
 /***/ }),
 /* 124 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/radio.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/radio.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17761,9 +17761,9 @@ exports.default = _default;
 
 /***/ }),
 /* 125 */
-/*!************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/radioGroup.js ***!
-  \************************************************************************************/
+/*!********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/radioGroup.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17808,9 +17808,9 @@ exports.default = _default;
 
 /***/ }),
 /* 126 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/rate.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/rate.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17851,9 +17851,9 @@ exports.default = _default;
 
 /***/ }),
 /* 127 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/readMore.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/readMore.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17890,9 +17890,9 @@ exports.default = _default;
 
 /***/ }),
 /* 128 */
-/*!*****************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/row.js ***!
-  \*****************************************************************************/
+/*!*************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/row.js ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17924,9 +17924,9 @@ exports.default = _default;
 
 /***/ }),
 /* 129 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/rowNotice.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/rowNotice.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17962,9 +17962,9 @@ exports.default = _default;
 
 /***/ }),
 /* 130 */
-/*!************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/scrollList.js ***!
-  \************************************************************************************/
+/*!********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/scrollList.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17999,9 +17999,9 @@ exports.default = _default;
 
 /***/ }),
 /* 131 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/search.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/search.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18057,9 +18057,9 @@ exports.default = _default;
 
 /***/ }),
 /* 132 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/section.js ***!
-  \*********************************************************************************/
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/section.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18098,9 +18098,9 @@ exports.default = _default;
 
 /***/ }),
 /* 133 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/skeleton.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/skeleton.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18140,9 +18140,9 @@ exports.default = _default;
 
 /***/ }),
 /* 134 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/slider.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/slider.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18182,9 +18182,9 @@ exports.default = _default;
 
 /***/ }),
 /* 135 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/statusBar.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/statusBar.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18214,9 +18214,9 @@ exports.default = _default;
 
 /***/ }),
 /* 136 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/steps.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/steps.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18252,9 +18252,9 @@ exports.default = _default;
 
 /***/ }),
 /* 137 */
-/*!***********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/stepsItem.js ***!
-  \***********************************************************************************/
+/*!*******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/stepsItem.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18287,9 +18287,9 @@ exports.default = _default;
 
 /***/ }),
 /* 138 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/sticky.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/sticky.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18324,9 +18324,9 @@ exports.default = _default;
 
 /***/ }),
 /* 139 */
-/*!************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/subsection.js ***!
-  \************************************************************************************/
+/*!********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/subsection.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18364,9 +18364,9 @@ exports.default = _default;
 
 /***/ }),
 /* 140 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/swipeAction.js ***!
-  \*************************************************************************************/
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/swipeAction.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18396,9 +18396,9 @@ exports.default = _default;
 
 /***/ }),
 /* 141 */
-/*!*****************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
-  \*****************************************************************************************/
+/*!*************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
+  \*************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18434,9 +18434,9 @@ exports.default = _default;
 
 /***/ }),
 /* 142 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/swiper.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/swiper.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18491,9 +18491,9 @@ exports.default = _default;
 
 /***/ }),
 /* 143 */
-/*!******************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
-  \******************************************************************************************/
+/*!**************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18527,9 +18527,9 @@ exports.default = _default;
 
 /***/ }),
 /* 144 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/switch.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/switch.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18568,9 +18568,9 @@ exports.default = _default;
 
 /***/ }),
 /* 145 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/tabbar.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/tabbar.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18607,9 +18607,9 @@ exports.default = _default;
 
 /***/ }),
 /* 146 */
-/*!************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/tabbarItem.js ***!
-  \************************************************************************************/
+/*!********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/tabbarItem.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18644,9 +18644,9 @@ exports.default = _default;
 
 /***/ }),
 /* 147 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/tabs.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/tabs.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18701,9 +18701,9 @@ exports.default = _default;
 
 /***/ }),
 /* 148 */
-/*!*****************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/tag.js ***!
-  \*****************************************************************************/
+/*!*************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/tag.js ***!
+  \*************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18747,9 +18747,9 @@ exports.default = _default;
 
 /***/ }),
 /* 149 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/text.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/text.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18803,9 +18803,9 @@ exports.default = _default;
 
 /***/ }),
 /* 150 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/textarea.js ***!
-  \**********************************************************************************/
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/textarea.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18856,9 +18856,9 @@ exports.default = _default;
 
 /***/ }),
 /* 151 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/toast.js ***!
-  \*******************************************************************************/
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/toast.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18902,9 +18902,9 @@ exports.default = _default;
 
 /***/ }),
 /* 152 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/toolbar.js ***!
-  \*********************************************************************************/
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/toolbar.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18939,9 +18939,9 @@ exports.default = _default;
 
 /***/ }),
 /* 153 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/tooltip.js ***!
-  \*********************************************************************************/
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/tooltip.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18983,9 +18983,9 @@ exports.default = _default;
 
 /***/ }),
 /* 154 */
-/*!************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/transition.js ***!
-  \************************************************************************************/
+/*!********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/transition.js ***!
+  \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19018,9 +19018,9 @@ exports.default = _default;
 
 /***/ }),
 /* 155 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/props/upload.js ***!
-  \********************************************************************************/
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/props/upload.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19077,9 +19077,9 @@ exports.default = _default;
 
 /***/ }),
 /* 156 */
-/*!**************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/config/zIndex.js ***!
-  \**************************************************************************/
+/*!**********************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/config/zIndex.js ***!
+  \**********************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19113,9 +19113,9 @@ exports.default = _default;
 
 /***/ }),
 /* 157 */
-/*!******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/libs/function/platform.js ***!
-  \******************************************************************************/
+/*!**************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/libs/function/platform.js ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19143,9 +19143,9 @@ exports.default = _default;
 
 /***/ }),
 /* 158 */
-/*!*********************************************!*\
-  !*** C:/Users/z/Desktop/推广端/tools/navgo.js ***!
-  \*********************************************/
+/*!*****************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/tools/navgo.js ***!
+  \*****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19209,7 +19209,64 @@ function jump(url, type, params) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 159 */,
+/* 159 */
+/*!*******************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/tools/request.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.myRequest = void 0;
+var BASE_URL = 'http://z.y15926.com/api/';
+var myRequest = function myRequest(url, datas, methods) {
+  return new Promise(function (resolve, reject) {
+    var token = uni.getStorageSync('token');
+    uni.request({
+      url: BASE_URL + url,
+      header: {
+        'content-type': 'application/x-www-form-urlencoded',
+        'token': token
+      },
+      method: methods || 'POST',
+      data: datas || {},
+      success: function success(res) {
+        if (res.data.code == 401) {
+          uni.reLaunch({
+            url: '/pages/login/login'
+          });
+          return uni.showToast({
+            title: res.data.msg,
+            icon: 'none'
+          });
+        }
+        if (res.data.code != 200) {
+          return uni.showToast({
+            title: res.data.msg,
+            icon: 'none'
+          });
+        }
+        resolve(res.data);
+      },
+      fail: function fail(err) {
+        // uni.showToast({
+        // 	title: '请求接口失败(可能服务器没有开)',
+        // 	icon: 'fail'
+        // })
+        reject(err);
+      }
+    });
+  });
+};
+exports.myRequest = myRequest;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
 /* 160 */,
 /* 161 */,
 /* 162 */,
@@ -19333,10 +19390,19 @@ function jump(url, type, params) {
 /* 280 */,
 /* 281 */,
 /* 282 */,
-/* 283 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-picker/props.js ***!
-  \*********************************************************************************/
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-picker/props.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19435,17 +19501,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 284 */,
-/* 285 */,
-/* 286 */,
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */,
-/* 291 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-upload/utils.js ***!
-  \*********************************************************************************/
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-upload/utils.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19586,10 +19652,10 @@ function chooseFile(_ref) {
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"], __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/wx.js */ 1)["default"]))
 
 /***/ }),
-/* 292 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-upload/mixin.js ***!
-  \*********************************************************************************/
+/* 301 */
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-upload/mixin.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19613,10 +19679,10 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 293 */
-/*!*********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-upload/props.js ***!
-  \*********************************************************************************/
+/* 302 */
+/*!*****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-upload/props.js ***!
+  \*****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19755,17 +19821,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 294 */,
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */,
-/* 301 */
-/*!********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-popup/props.js ***!
-  \********************************************************************************/
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */,
+/* 309 */,
+/* 310 */
+/*!****************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-popup/props.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19859,17 +19925,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 302 */,
-/* 303 */,
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */,
-/* 308 */,
-/* 309 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-toolbar/props.js ***!
-  \**********************************************************************************/
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-toolbar/props.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19918,17 +19984,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 310 */,
-/* 311 */,
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */,
-/* 316 */,
-/* 317 */
-/*!***************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-loading-icon/props.js ***!
-  \***************************************************************************************/
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */,
+/* 324 */,
+/* 325 */,
+/* 326 */
+/*!***********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-loading-icon/props.js ***!
+  \***********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20002,17 +20068,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 318 */,
-/* 319 */,
-/* 320 */,
-/* 321 */,
-/* 322 */,
-/* 323 */,
-/* 324 */,
-/* 325 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-icon/icons.js ***!
-  \*******************************************************************************/
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */,
+/* 332 */,
+/* 333 */,
+/* 334 */
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-icon/icons.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20240,10 +20306,10 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 326 */
-/*!*******************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-icon/props.js ***!
-  \*******************************************************************************/
+/* 335 */
+/*!***************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-icon/props.js ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20347,17 +20413,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 327 */,
-/* 328 */,
-/* 329 */,
-/* 330 */,
-/* 331 */,
-/* 332 */,
-/* 333 */,
-/* 334 */
-/*!**********************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-overlay/props.js ***!
-  \**********************************************************************************/
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */
+/*!******************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-overlay/props.js ***!
+  \******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20396,17 +20462,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 335 */,
-/* 336 */,
-/* 337 */,
-/* 338 */,
-/* 339 */,
-/* 340 */,
-/* 341 */,
-/* 342 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-transition/props.js ***!
-  \*************************************************************************************/
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-transition/props.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20445,10 +20511,10 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 343 */
-/*!******************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-transition/transition.js ***!
-  \******************************************************************************************/
+/* 352 */
+/*!**************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-transition/transition.js ***!
+  \**************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20462,7 +20528,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 55));
 var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 57));
-var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 344));
+var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 353));
 // 定义一个一定时间后自动成功的promise，让调用nextTick方法处，进入下一个then方法
 var nextTick = function nextTick() {
   return new Promise(function (resolve) {
@@ -20554,10 +20620,10 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 344 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
-  \********************************************************************************************/
+/* 353 */
+/*!****************************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
+  \****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20747,17 +20813,17 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 345 */,
-/* 346 */,
-/* 347 */,
-/* 348 */,
-/* 349 */,
-/* 350 */,
-/* 351 */,
-/* 352 */
-/*!*************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-status-bar/props.js ***!
-  \*************************************************************************************/
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */
+/*!*********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-status-bar/props.js ***!
+  \*********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20780,17 +20846,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 353 */,
-/* 354 */,
-/* 355 */,
-/* 356 */,
-/* 357 */,
-/* 358 */,
-/* 359 */,
-/* 360 */
-/*!**************************************************************************************!*\
-  !*** C:/Users/z/Desktop/推广端/node_modules/uview-ui/components/u-safe-bottom/props.js ***!
-  \**************************************************************************************/
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */
+/*!**********************************************************************************!*\
+  !*** D:/郑州/代驾/daijiatoA/node_modules/uview-ui/components/u-safe-bottom/props.js ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

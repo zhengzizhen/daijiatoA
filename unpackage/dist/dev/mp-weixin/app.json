@@ -5,7 +5,8 @@
     "pages/Service/record",
     "pages/Service/Money",
     "pages/Service/authentication",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/login/login"
   ],
   "subPackages": [
     {

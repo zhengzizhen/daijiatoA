@@ -1,39 +1,49 @@
 <template>
 	<view class="pd30 body">
-		<view class="dis_f jscb content">
+		<view class="dis_f jscb content" v-if="list.wx_nickname">
 			<p>姓名</p>
-			<text>卢本伟</text>
+			<text>{{list.wx_nickname}}</text>
 		</view>
 
-		<view class="dis_f jscb content">
+		<!-- <view class="dis_f jscb content">
 			<p>性别</p>
 			<text>男</text>
-		</view>
-
-		<view class="dis_f jscb content">
-			<p>手机号</p>
-			<text>17633612613</text>
-		</view>
-		
-		<view class="dis_f jscb content">
-			<p>身份证号</p>
-			<text>411329199912153118</text>
-		</view>
-		
-		<view class="dis_f jscb content alitmc">
-			<p>身份证</p>
-			<view class="image"></view>
-		</view>
-		
-		<view class="dis_f jscb content alitmc">
-			<p>营业执照</p>
-			<view class="image"></view>
-		</view>
-		
-		
-		<!-- <view class="fixed">
-			<p>听单中</p>
 		</view> -->
+
+		<view class="dis_f jscb content" v-if="list.phone">
+			<p>手机号</p>
+			<text>{{list.phone}}</text>
+		</view>
+		
+		<view class="dis_f jscb content" v-if="list.wx_account">
+			<p>微信账号</p>
+			<text>{{list.wx_account}}</text>
+		</view>
+		
+		<view class="dis_f jscb content" v-if="list.wx_nickname">
+			<p>微信实名</p>
+			<text>{{list.wx_nickname}}</text>
+		</view>
+		
+		<view class="dis_f jscb content" v-if="list.store_intro">
+			<p>门店简介</p>
+			<text>{{list.store_intro}}</text>
+		</view>
+		
+		<view class="dis_f jscb content alitmc" v-if="list.id_card_front_img">
+			<p>身份证正面</p>
+			<image class="image" :src="list.id_card_front_img" mode=""></image>
+		</view>
+		
+		<view class="dis_f jscb content alitmc" v-if="list.id_card_verso_img">
+			<p>身份证反面</p>
+			<image class="image" :src="list.id_card_verso_img" mode=""></image>
+		</view>
+		
+		<view class="dis_f jscb content alitmc" v-if="list.store_business_license">
+			<p>营业执照</p>
+			<image class="image" :src="list.store_business_license" mode=""></image>
+		</view>
 	</view>
 </template>
 
@@ -41,11 +51,17 @@
 	export default {
 		data() {
 			return {
-
+				list:{}//信息
 			}
 		},
+		onLoad() {
+			this.getlist()
+		},
 		methods: {
-
+			async getlist(){
+				const res = await this.$http('promoter/detail')
+				this.list = res.data
+			}
 		}
 	}
 </script>

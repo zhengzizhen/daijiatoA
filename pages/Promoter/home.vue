@@ -6,16 +6,11 @@
 				<image :src="v.image" mode=""></image>
 			</p>
 		</view>
-		<Card />
 	</view>
 </template>
 
 <script>
-	import Card from '@/components/bottom.vue'
 	export default {
-		components: {
-			Card
-		},
 		data() {
 			return {
 				list: [{
@@ -50,13 +45,7 @@
 						this.$jump('./take')
 						break
 					case 3:
-						let a = Math.round(Math.random())
-						if(a == 0){
-							this.$jump('/pages/Service/authentication?tit=','params','推广商身份认证')
-							return false
-						}else{
-							this.$jump('./Information')
-						}
+						this.$jump('./Information')
 						break
 				}
 			}
@@ -105,6 +94,7 @@
 			}
 		}
 	}
+
 	.card:nth-child(3) {
 		p {
 			color: #A95319;

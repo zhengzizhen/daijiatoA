@@ -1,7 +1,5 @@
 {
   "navigationBarTitleText": "主页",
   "navigationStyle": "custom",
-  "usingComponents": {
-    "card": "/components/bottom"
-  }
+  "usingComponents": {}
 }

@@ -363,10 +363,6 @@
 }
 @font-face {
   font-family: "PF";
-  src: url(/static/PingFangMedium.ttf);
-}
-@font-face {
-  font-family: "PF";
   src: url("https://ttf.appldkj.com/PingFangMedium.ttf");
 }
 ._p, text, label, textarea, ._span, view {

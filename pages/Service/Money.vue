@@ -1,10 +1,15 @@
 <template>
 	<view class="pd30">
-		<view class="ct_nav posir" @click="toDream">
-			<text>我的账户余额(元)</text>
-			<p>￥{{money.toFixed(2)}}</p>
-			<view @click.stop="toMoney" class="cashout posia">
-				<p>去提现</p>
+		<view class="posir ios">
+			<image src="@/static/image/Promoter/background.jpg" mode=""></image>
+			<view class="posia ioss">
+				<view class="ct_nav posir" @click="toDream">
+					<text>我的账户余额(元)</text>
+					<p>￥{{userinfo.commission}}</p>
+					<view @click.stop="toMoney" class="cashout posia">
+						<p>去提现</p>
+					</view>
+				</view>
 			</view>
 		</view>
 		<p class="title">提现记录</p>
@@ -35,25 +40,27 @@
 				<label>驳回原因： 银行卡号错误</label>
 			</view>
 		</view>
-		<Card />
 	</view>
 </template>
 
 <script>
-	import Card from '@/components/bottom.vue'
 	export default {
-		components:{
-			Card
-		},
 		data() {
 			return {
 				money:200,
 				curry:0,
 				list:['已通过','已驳回'],
-				isShow:true
+				isShow:true,
+				userinfo:{}
 			}
 		},
+		onLoad() {
+			this.getlist()
+		},
 		methods: {
+			getlist(){
+				this.userinfo = uni.getStorageSync('userinfo')
+			},
 			cheMenu(index){
 				if(index == this.curry){
 					return false
@@ -78,7 +85,7 @@
 		margin-top: 20rpx;
 		padding: 60rpx 40rpx;
 		height: 286rpx;
-		background: url('../../static/image/Promoter/background.jpg') no-repeat 0 0;
+		// background: url('../../static/image/Promoter/background.jpg') no-repeat 0 0;
 		background-size: 100%;
 		box-shadow: 0rpx 10rpx 7rpx 0rpx rgba(73, 202, 164, 0.08);
 		border-radius: 20rpx;
@@ -164,6 +171,19 @@
 			.rigs{
 				color: #000000;
 			}
+		}
+	}
+	.ios{
+		width: 694rpx;
+		height: 300rpx;
+		image{
+			width: 694rpx;
+			height: 300rpx;
+		}
+		.ioss{
+			width: 694rpx;
+			top: 0;
+			left: 0;
 		}
 	}
 </style>

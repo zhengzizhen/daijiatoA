@@ -15,23 +15,13 @@
 				</view>
 			</view>
 		</view>
-		<u-picker itemHeight='80' cancelText='' confirmColor='#35C77C' :show="isShow" ref="uPicker" :columns="columns"
+		<u-picker itemHeight='80' cancelText='取消' confirmColor='#35C77C' :show="isShow" ref="uPicker" :columns="columns"
 			@confirm="confirm" @change="changeHandler"></u-picker>
-		<view class="swip">
-			<view class="uni-padding-wrap">
-				<view class="uni-title"></view>
-			</view>
-		</view>
-		<Card />
 	</view>
 </template>
 
 <script>
-	import Card from '@/components/bottom.vue'
 	export default {
-		components: {
-			Card
-		},
 		data() {
 			return {
 				title: 'picker-view',
@@ -48,27 +38,30 @@
 			}
 		},
 		onLoad() {
-			const date = new Date()
-			const years = []
-			this.year = date.getFullYear()
-			const months = []
-			this.month = date.getMonth() + 1
-			const days = []
-			this.day = date.getDate()
-			for (let i = 1990; i <= date.getFullYear(); i++) {
-				this.years.push(i + '年')
-			}
-			for (let i = 1; i <= 12; i++) {
-				this.months.push(i + '月')
-			}
-			for (let i = 1; i <= 31; i++) {
-				this.days.push(i + '日')
-			}
-			this.columns.push(this.years)
-			this.columns.push(this.months)
-			this.columns.push(this.days)
+			this.getpacker()
 		},
 		methods: {
+			getpacker(){
+				const date = new Date()
+				const years = []
+				this.year = date.getFullYear()
+				const months = []
+				this.month = date.getMonth() + 1
+				const days = []
+				this.day = date.getDate()
+				for (let i = 1990; i <= date.getFullYear(); i++) {
+					this.years.push(i + '年')
+				}
+				for (let i = 1; i <= 12; i++) {
+					this.months.push(i + '月')
+				}
+				for (let i = 1; i <= 31; i++) {
+					this.days.push(i + '日')
+				}
+				this.columns.push(this.years)
+				this.columns.push(this.months)
+				this.columns.push(this.days)
+			},
 			changeHandler(e) {
 				const {
 					columnIndex,
@@ -87,10 +80,10 @@
 			},
 			// 回调参数为包含columnIndex、value、values
 			confirm(e) {
-				let year = e.value[0].replace('年','')
-				let mon = e.value[1].replace('月','')
-				let day = e.value[2].replace('日','')
-				// console.log(year,mon,day);
+				console.log(e);
+				this.year = e.value[0].replace('年','')
+				this.month = e.value[1].replace('月','')
+				this.day = e.value[2].replace('日','')
 				this.isShow = false
 			}
 		}

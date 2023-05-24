@@ -13,16 +13,11 @@
 		<view class="btn" @click="toindex">
 			提交审核
 		</view>
-		<Card />
 	</view>
 </template>
 
 <script>
-	import Card from '@/components/bottom.vue'
 	export default {
-		components:{
-			Card
-		},
 		data() {
 			return {
 				content:'',

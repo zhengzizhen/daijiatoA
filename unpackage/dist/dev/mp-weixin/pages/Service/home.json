@@ -1,7 +1,5 @@
 {
   "navigationBarTitleText": "服务商",
   "enablePullDownRefresh": false,
-  "usingComponents": {
-    "card": "/components/bottom"
-  }
+  "usingComponents": {}
 }

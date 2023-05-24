@@ -1,7 +1,5 @@
 {
   "navigationBarTitleText": "推广商",
   "enablePullDownRefresh": false,
-  "usingComponents": {
-    "card": "/components/bottom"
-  }
+  "usingComponents": {}
 }

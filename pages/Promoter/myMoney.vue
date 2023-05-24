@@ -6,7 +6,7 @@
 			<view class="posia ioss">
 				<view class="ct_nav posir" @click="toDream">
 					<text>我的账户余额(元)</text>
-					<p>￥{{money.toFixed(2)}}</p>
+					<p>￥{{userinfo.commission}}</p>
 					<view @click.stop="toMoney" class="cashout posia">
 						<p>去提现</p>
 					</view>
@@ -17,32 +17,49 @@
 		
 		<view class="dis_f content alitmc jscb" v-for="(v,index) in list" :key="index">
 			<view class="dis_f flex_c msg">
-				<p>{{v.way}}</p>
-				<text>{{v.date}}</text>
+				<p>{{v.fund_type}}</p>
+				<text>{{v.created_at}}</text>
 			</view>
-			<text class="red">-{{v.number}}</text>
+			<text class="red">{{v.number}}</text>
 		</view>
-		<Card />
 	</view>
 </template>
 
 <script>
-	import Card from '@/components/bottom.vue'
 	export default {
-		components:{
-			Card
-		},
 		data() {
 			return {
 				money: 200,
 				list:[
-					{way:'提现到银行卡',date:'2023-09-21 18:00',number:'150'},
-					{way:'提现到银行卡',date:'2023-09-21 18:00',number:'150'},
-					{way:'提现到银行卡',date:'2023-09-21 18:00',number:'150'}
-				]
+				],
+				userinfo:{},
+				page:1,
+				bottom:false
 			}
 		},
+		onLoad() {
+			this.userinfo = uni.getStorageSync('userinfo')
+			this.getlog()
+		},
+		onReachBottom() {
+			if(this.bottom == true){
+				return false
+			}
+			this.page+=1
+			this.getlog()
+		},
 		methods: {
+			async getlog(){
+				const res = await this.$http('promoter/fund/log',{
+					page:this.page,
+					limit:10,
+					type:'withdraw'
+				})
+				if(res.data.length<10){
+					this.bottom = true
+				}
+				this.list = this.list.concat(res.data)
+			},
 			toMoney() {
 				this.$jump('./Money')
 			}

@@ -1,8 +1,7 @@
 {
-  "navigationBarTitleText": "",
+  "navigationBarTitleText": "服务商认证",
   "enablePullDownRefresh": false,
   "usingComponents": {
-    "u-upload": "/node-modules/uview-ui/components/u-upload/u-upload",
-    "card": "/components/bottom"
+    "u-upload": "/node-modules/uview-ui/components/u-upload/u-upload"
   }
 }

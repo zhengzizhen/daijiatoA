@@ -17,6 +17,9 @@ import {
 
 Vue.prototype.$jump = jump
 
+import {myRequest}  from "@/tools/request.js"
+Vue.prototype.$http = myRequest;
+
 try {
   function isPromise(obj) {
     return (
